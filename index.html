@@ -7,11 +7,52 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <button class="set-grid-btn">Set Grid Size</button>
-      <button class="clear-btn">Clear</button>
+    <div class="container">
+      <div>
+        <h2>Etch-A-Sketch</h2>
+      </div>
+      <div class="workplace">
+        <div class="workplace__controls">
+          <button class="primary-btn-bg">
+            <span
+              class="primary-btn-front js-controls primary-btn-front__active"
+              id="black"
+            >
+              <img alt="draw in black only" src="/img/brush-black-icon.svg" />
+            </span>
+          </button>
+          <button class="primary-btn-bg">
+            <span class="primary-btn-front js-controls" id="rainbow">
+              <img alt="draw in rainbow" src="/img/brush-rainbow-icon.svg" />
+            </span>
+          </button>
+          <button class="primary-btn-bg">
+            <span class="primary-btn-front js-controls" id="eraser">
+              <img src="/img/eraser.png" />
+            </span>
+          </button>
+          <button class="primary-btn-bg primary-btn-bg--clear-btn">
+            <span
+              class="primary-btn-front primary-btn-front--clear-btn"
+              id="clear-btn"
+              >clear</span
+            >
+          </button>
+        </div>
+        <div id="canvas" class="workplace__canvas"></div>
+      </div>
+      <div class="slider">
+        <p class="slider__value">16x16</p>
+        <input
+          type="range"
+          class="slider__input"
+          min="1"
+          max="100"
+          value="16"
+        />
+      </div>
     </div>
-    <div id="root" class="root"></div>
+
     <script src="script.js"></script>
   </body>
 </html>
